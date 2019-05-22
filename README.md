@@ -8,3 +8,16 @@
 -  MVC
 -  uses `TypeScript`
 
+## Things to know before learning `Angular`
+- TypeScript
+- Classes
+- High Order Array Methods
+- Arrow functions
+- Promises and Oberservables
+- MVC Pattern
+
+## Installing Angular
+**Note**: Make sure you have `NodeJS` installed.
+- To install angular run this command `npm install -g @angular/cli`.
+-  
+
