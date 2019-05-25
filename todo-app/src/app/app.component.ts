@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-app';
+  name = 'Muhammad';
+
+  constructor(){
+  	this.changeName('Alex')
+  }
+  changeName(name:string){
+  	this.name = name;
+  }
 }

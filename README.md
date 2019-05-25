@@ -1,3 +1,4 @@
+
 # Angular Tutorial
 
 ## Why use Angular
@@ -35,5 +36,10 @@
 - `Package.json` file has the dependencies present in our project.
 - We run `ng build` command when deploying angular app.
 - `app.module.ts` file contains all the components and modules. Let say we want to use a custom module we have to put the module name in this file.
-- 
 
+## Notes
+- Most of the useful stuff is within code embedded in comments
+- `Constructor` is intiated when the component is loaded.
+- To generate component `ng generate component <name of the component>` (Example: `ng generate component components/Todo`). This is going to generate a todo component in the components folder.[]
+- `*nGFOr allows us to loop for links`
+- `ng generate service <Service Name >`
