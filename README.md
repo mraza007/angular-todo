@@ -34,5 +34,6 @@
 - If you have installed `AngularJS` locally run the app using `npm run-script ng serve --open`.
 - `Package.json` file has the dependencies present in our project.
 - We run `ng build` command when deploying angular app.
+- `app.module.ts` file contains all the components and modules. Let say we want to use a custom module we have to put the module name in this file.
 - 
 
