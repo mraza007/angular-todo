@@ -43,3 +43,6 @@
 - To generate component `ng generate component <name of the component>` (Example: `ng generate component components/Todo`). This is going to generate a todo component in the components folder.[]
 - `*nGFOr allows us to loop for links`
 - `ng generate service <Service Name >`
+
+## Modules
+- In Angular app everything is related to modules for instance, user can have there own module and admin can have its own module.
