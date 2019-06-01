@@ -54,3 +54,11 @@
 - Module has components and services.
 - Components has `HTML TEMPLATE` and `Class` has all the logic that deals with HTML templates.
 - Services has business logic.
+
+
+## Angular `SRC/` folder
+
+- This folder contains the entire code of our app
+- `main.ts` file is the entry point of the app.
+- `app.module.ts` file is the root module of the app
+- `app.component.ts` file has the data that is needed by the view
