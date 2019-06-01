@@ -47,3 +47,10 @@
 ## Modules
 - In Angular app everything is related to modules for instance, user can have there own module and admin can have its own module.
 - Furthermore, Each module is built on components, For instance we can have components to display a `sidebar`,`navigation` and `posts`
+- Modules will also have services that deals with business logic.
+
+## Angular Architecture Summary
+- `Angular App` One or More than one module.
+- Module has components and services.
+- Components has `HTML TEMPLATE` and `Class` has all the logic that deals with HTML templates.
+- Services has business logic.
