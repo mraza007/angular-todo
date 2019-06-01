@@ -28,21 +28,11 @@
 - Once we have installed we can check the version using `ng --version`.
 - If you installed using `-g` flag you can run `ng new my-app`.
 - If you want run angular locally use this command `npx -p @angular/cli ng new hello-world-project `. (Note:`npx comes with npm`)
-
-## Building `TODO` App using `ANGULARJS`.
-- We will be building simple todo app using `angularJS`.
 - Run `ng serve --open` to run the app locally. 
 - If you have installed `AngularJS` locally run the app using `npm run-script ng serve --open`.
 - `Package.json` file has the dependencies present in our project.
 - We run `ng build` command when deploying angular app.
 - `app.module.ts` file contains all the components and modules. Let say we want to use a custom module we have to put the module name in this file.
-
-## Notes
-- Most of the useful stuff is within code embedded in comments
-- `Constructor` is intiated when the component is loaded.
-- To generate component `ng generate component <name of the component>` (Example: `ng generate component components/Todo`). This is going to generate a todo component in the components folder.[]
-- `*nGFOr allows us to loop for links`
-- `ng generate service <Service Name >`
 
 ## Modules
 - In Angular app everything is related to modules for instance, user can have there own module and admin can have its own module.
@@ -62,3 +52,29 @@
 - `main.ts` file is the entry point of the app.
 - `app.module.ts` file is the root module of the app
 - `app.component.ts` file has the data that is needed by the view
+
+
+## Angular Component
+- A component is made up of three parts `template`, `class` , `Metadata`.
+- `Template` represents `VIEW` and created using `HTML`.
+- `Class` has the code and its created using `TYPESCRIPT` and it contains data methods. They are used to control the logic.
+- `METADATA` differentiates between whether its a regular class or angular component.
+- These three things make up the component.
+
+### Root Component of the app
+
+```ts
+import { Component } from '@angular/core';
+<!-- This is the meta data for the component and this decorator contains the templates for the view-->
+<!-- selector is the custom html tag that is used to represent the component -->
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+<!-- This is class that contains methods for html -->
+export class AppComponent {
+  title = 'CODE';
+}
+```
+
