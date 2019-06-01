@@ -78,3 +78,7 @@ export class AppComponent {
 }
 ```
 
+## Generating Component
+- `ng generate component <name_of_component>`
+- everytime we add the component it is added to `app.module.ts`
+- All other components are added to the root component.
