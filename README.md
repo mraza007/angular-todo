@@ -46,3 +46,4 @@
 
 ## Modules
 - In Angular app everything is related to modules for instance, user can have there own module and admin can have its own module.
+- Furthermore, Each module is built on components, For instance we can have components to display a `sidebar`,`navigation` and `posts`
