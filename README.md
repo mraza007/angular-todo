@@ -82,3 +82,27 @@ export class AppComponent {
 - `ng generate component <name_of_component>`
 - everytime we add the component it is added to `app.module.ts`
 - All other components are added to the root component.
+- We can also embed html code in the component file.
+```ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-test',
+  template: `
+            <div>
+            <h1>Hello World</h1>
+            </div>
+            `
+  styleUrls: ['./test.component.css']
+})
+export class TestComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+This is going to render html straight from the `ts` component file but according to conventions we don't do that since projects get larger and its hard to keep track of things so we keep `html` code in separate file.
