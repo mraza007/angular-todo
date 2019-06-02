@@ -111,3 +111,39 @@ export class TestComponent implements OnInit {
 ```
 
 This is going to render html straight from the `ts` component file but according to conventions we don't do that since projects get larger and its hard to keep track of things so we keep `html` code in separate file.
+- Components are building blocks of the angular application
+
+
+## Interpolation
+- `{{string}}` this is used for interpolation of the data. When we want to make the data dynamic we use string interpolation.
+- String interpolation in the example below
+- We can also call custom methods.
+```ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-test',
+  template: `
+            <div>
+            <h1>Hello {{name}}</h1>
+            <h2>{{greet()}}</h2>
+            </div>
+            `
+  style`: [`
+           div {
+            color:red;
+           } 
+        `]
+})
+export class TestComponent implements OnInit {
+    public name = "John"
+  constructor() { }
+
+  ngOnInit() {
+  }
+  greet(){
+    return "Hello" + this.name;
+  }
+
+}
+```
