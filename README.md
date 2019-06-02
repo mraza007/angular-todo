@@ -83,6 +83,7 @@ export class AppComponent {
 - everytime we add the component it is added to `app.module.ts`
 - All other components are added to the root component.
 - We can also embed html code in the component file.
+- You can also embed `css` within component file too.
 ```ts
 import { Component, OnInit } from '@angular/core';
 
@@ -93,7 +94,11 @@ import { Component, OnInit } from '@angular/core';
             <h1>Hello World</h1>
             </div>
             `
-  styleUrls: ['./test.component.css']
+  style`: [`
+           div {
+            color:red;
+           } 
+        `]
 })
 export class TestComponent implements OnInit {
 
