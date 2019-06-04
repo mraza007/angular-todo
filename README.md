@@ -189,12 +189,17 @@ import { Component, OnInit } from '@angular/core';
            .text-danger {
             color : red
            }
+           .text-font: 20px;
         `]
 })
 export class TestComponent implements OnInit {
     public name = "John"
     public id =  "MyTest"
     public hasError = "true"
+    public classes = {
+        "text-danger":this.hasError,
+        "text-font" : true,
+    }
   constructor() { }
 
   ngOnInit() {
@@ -208,4 +213,4 @@ export class TestComponent implements OnInit {
 ```
 
 - Angular provides custom `directive` html classes.
-- 
+- You can also apply everything at the same time using `ngClass` directive.
