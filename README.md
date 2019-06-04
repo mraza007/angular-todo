@@ -129,6 +129,7 @@ import { Component, OnInit } from '@angular/core';
             <h2>{{greet()}}</h2>
             <h3>{{site}}</h3>
             </div>
+            <input type="text" name="xyz" id = "{{id}}" [disabled]="true">
             `
   style`: [`
            div {
@@ -138,6 +139,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
     public name = "John"
+    public id =  "MyTest"
   constructor() { }
 
   ngOnInit() {
@@ -156,3 +158,54 @@ export class TestComponent implements OnInit {
 - Attributes are defined by `HTML`
 - Properties are defined by `DOM`.
 - Attributes initialize `dom` properties and they cannot be changed once initialized.
+- Property values can change.
+- String interpolation only works with `string` values but there are other boolean `html` values where properties are required.
+- property binding allows us to use boolean values.
+- You can also use `bind-disabled` for property binding.
+
+## Class Binding.
+- Class binding just works like Property binding but it works with `css` values.
+- Furthermore, you can use class binding when you have a conditional.
+
+```ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-test',
+  template: `
+            <div>
+            <h1>Hello {{name}}</h1>
+            <h2>{{greet()}}</h2>
+            <h3>{{site}}</h3>
+            </div>
+            <!-- Let say we want to put out a danger message -->
+            <h2 [class.text-danger]="hasError">Danger don't proceed</h2>
+            <input type="text" name="xyz" id = "{{id}}" [disabled]="true">
+            `
+  style`: [`
+           div {
+            color:red;
+           } 
+           .text-danger {
+            color : red
+           }
+        `]
+})
+export class TestComponent implements OnInit {
+    public name = "John"
+    public id =  "MyTest"
+    public hasError = "true"
+  constructor() { }
+
+  ngOnInit() {
+  }
+  greet(){
+    return "Hello" + this.name;
+  }
+  public site = window.location.href
+
+}
+```
+
+- Angular provides custom `directive` html classes.
+- 
