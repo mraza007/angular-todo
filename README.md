@@ -127,6 +127,7 @@ import { Component, OnInit } from '@angular/core';
             <div>
             <h1>Hello {{name}}</h1>
             <h2>{{greet()}}</h2>
+            <h3>{{site}}</h3>
             </div>
             `
   style`: [`
@@ -144,6 +145,14 @@ export class TestComponent implements OnInit {
   greet(){
     return "Hello" + this.name;
   }
+  public site = window.location.href
 
 }
 ```
+
+
+## Property Binding.
+- Attributes and Properties are not the same.
+- Attributes are defined by `HTML`
+- Properties are defined by `DOM`.
+- Attributes initialize `dom` properties and they cannot be changed once initialized.
